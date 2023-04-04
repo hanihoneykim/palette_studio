@@ -1,0 +1,7 @@
+mixin song(song)
+    div 
+        h4
+            a(href=`/songs/${song.id}`)=song.title
+        p=song.artist
+        small=song.album
+        hr

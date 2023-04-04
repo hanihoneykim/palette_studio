@@ -1,4 +1,9 @@
 extends base
+include mixins/song
 
 block content
     div
+        each song in songs
+            +song(song)
+        else
+            span.empty__message No songs found
