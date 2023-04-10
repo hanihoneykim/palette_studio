@@ -1,7 +1,7 @@
 mixin song(song)
-    div 
+    div#songContainer(data-id=song._id)
         h4
-            a(href=`/songs/${song.id}`)=song.title
+            a(href=`/songs/${song.id}`)#songTitle=song.title
         p=song.artist
         small=song.album
         hr

@@ -1,11 +1,9 @@
 extends base.pug
 
 block content
-    div 
-        h4
-            a(href=`/songs/${song.id}`)=song.title
+    div
+        h4=song.title
         p=song.artist
         p=song.album
         p=song.genre
         small=song.createdAt
-        small=song.views

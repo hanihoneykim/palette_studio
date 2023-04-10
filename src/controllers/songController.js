@@ -1,4 +1,3 @@
-import { async } from "regenerator-runtime";
 import Song from "../models/Song";
 import User from "../models/User";
 
@@ -13,9 +12,6 @@ export const watch = async(req, res) => {
   if (!song) {
     return res.render("404", {pageTitle:"Song not found.", siteName:"Ice Cream"})
   }
-  song.views = 0;
-  song.views++;
-  song.save()
   return res.render("watch", {pageTitle:song.title, siteName:"Ice Cream", song});
 };
 
@@ -37,4 +33,16 @@ export const postUpload = async(req, res) => {
   } catch (error) {
     return res.status(400).render("upload",{pageTitle:"Upload Music", siteName:"Ice Cream", errorMessage:error._message});
   }
+};
+
+
+export const registerView = async (req, res) => {
+  const { id } = req.params;
+  const song = await Song.findById(id);
+  if (!song) {
+    return res.sendStatus(404);
+  }
+  song.meta.views = song.meta.views + 1;
+  await song.save();
+  return res.sendStatus(200);
 };
