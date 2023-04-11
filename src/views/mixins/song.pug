@@ -1,7 +1,9 @@
 mixin song(song)
     div#songContainer(data-id=song._id)
-        h4
-            a(href=`/songs/${song.id}`)#songTitle=song.title
-        p=song.artist
-        small=song.album
-        hr
+        div.song-mixin__albumArt(onclick=`location.href='/songs/${song.id}';`)(style=`background-image:url(${song.albumArtUrl});background-size:cover;background-position:center;cursor:pointer;`)
+        div
+            h4
+                a(href=`/songs/${song.id}`)#songTitle=song.title
+            p=song.artist
+            small=song.album
+            hr

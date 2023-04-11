@@ -1,6 +1,8 @@
 extends base.pug
 
 block content
+    div.song-mixin__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
+    audio(src="/" + song.fileUrl, controls)
     div
         h4=song.title
         p=song.artist

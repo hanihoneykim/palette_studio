@@ -1,14 +1,16 @@
 import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema({
-    title:String,
-    artist:String,
-    album:String,
-    genre:String,
-    createdAt:Date,
+    title: { type:String, required:true, trim:true, maxLength:80 },
+    fileUrl: { type:String, required:true },
+    albumArtUrl: { type:String, required:true },
+    artist:{ type:String, required:true, trim:true, maxLength:80 },
+    album:{ type:String, required:true, trim:true, maxLength:80 },
+    genre:{ type:String, required:true, trim:true },
+    createdAt:{ type:Date, required:true, default:Date.now },
     meta:{
-        views:Number,
-        rating:Number,
+        views:{ type: Number, default: 0, required: true },
+        rating:{ type: Number, default: 0, required: true },
     }
 
 });

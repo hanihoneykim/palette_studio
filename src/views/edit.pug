@@ -5,10 +5,8 @@ block content
         span=errorMessage
         
     form(method="POST", enctype="multipart/form-data")
-        label(for="song") Music File
-        input(name="song", placeholder="Music File", required, type="file", accept="audio/*", id="song")
-        label(for="albumArt") Album Image
-        input(name="albumArt", placeholder="Album Art Image", required, type="file", accept="image/*", id="albumArt")
+        label(for="album") Album Image
+        input(name="album", placeholder="Album Image", required, type="file", accept="image/*", id="album")
         input(name="title", placeholder="Title", required, type="text", mexlength=80)
         input(name="artist", placeholder="Artist", required, type="text", mexlength=80)
         input(name="album", placeholder="Album", required, type="text", mexlength=80)
