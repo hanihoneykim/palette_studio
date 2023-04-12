@@ -1,8 +1,19 @@
 extends base.pug
 
 block content
-    div.song-mixin__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
+    div.song-watch__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
     audio(src="/" + song.fileUrl, controls)
+    div
+        div 
+            button#play-watch.play Play 
+            button#mute-watch.mute Mute
+            span#time 00:00 / 00:00
+            input(type="range", min="0", max="100")
+
+
+
+
+
     div
         h4=song.title
         p=song.artist
