@@ -1,0 +1,18 @@
+extends base.pug
+
+block content
+    if errorMessage 
+        span=errorMessage
+    form(method="POST")
+        input(name="name",type="text",placeholder="Name", required)
+        input(name="email",type="email",placeholder="Email", required)
+        input(name="username",type="text",placeholder="Username", required, mexlength=10)
+        input(name="password",type="password",placeholder="Password", required, mexlength=20, minlength=8)
+        input(name="password2",type="password",placeholder="Confirm Password", required, mexlength=20, minlength=8)
+        input(name="location",type="text",placeholder="Location")
+        input#submit(type="submit",value="Join")
+
+    div.auth-switch
+        span Already have an account?  
+        a(href="/join") Login now &rarr;
+        

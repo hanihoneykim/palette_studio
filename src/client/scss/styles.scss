@@ -12,6 +12,9 @@
 
 // Screens
 
+@import "./screens/songLikes.scss";
+
+
 // Example: @import "./screens/search.scss";
 
 // Defaults
@@ -28,8 +31,9 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1490px;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
+  height:100%;
+  margin: 50px;
+  
 }

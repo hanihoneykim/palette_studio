@@ -1,22 +1,37 @@
 extends base.pug
+include mixins/playlist
 
 block content
-    div.song-watch__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
-    audio(src="/" + song.fileUrl, controls)
-    div
-        div 
-            button#play-watch.play Play 
-            button#mute-watch.mute Mute
-            span#time 00:00 / 00:00
-            input(type="range", min="0", max="100")
+    div#now-container
+        div.now-playing
+            div.song-watch__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
+            audio(src="/" + song.fileUrl, controls)
+            div
+                div 
+                    button#play-watch.play Play 
+                    button#mute-watch.mute Mute
+                    span#time 00:00 / 00:00
+                    input(type="range", min="0", max="100")
+
+            div
+                h4=song.title
+                p=song.artist
+                p=song.album
+                p=song.genre
+                small=song.createdAt
+
+        div#playlist-box
+            div#playlist-menu
+                div#playlist-menu__now 
+                    span 재생목록
+                div#playlist-menu__likes 
+                    span 내가 좋아하는 곡
+            div.playlist#now-playlist
+                each song in songs
+                    +song(song)
+                else
+                    span.empty__message No songs found
 
 
-
-
-
-    div
-        h4=song.title
-        p=song.artist
-        p=song.album
-        p=song.genre
-        small=song.createdAt
+block scripts
+    script(src="/static/js/playlist.js")

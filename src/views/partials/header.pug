@@ -3,12 +3,18 @@ header
         i.fas.fa-ice-cream
     nav
         ul
+            if loggedIn
+                li
+                    a#likes-link(href="/users/likes")
+                        i.fas.fa-heart.fa-lg
+                li
+                    a(href="/songs/upload")  Upload Music
+            if (!loggedIn)
+                li
+                    a(href="/login")  Login
+                li
+                    a(href="/join").header__btn  Join
             li
                 a(href="/search")
                     i.fas.fa-search
-            li
-                a(href="/songs/upload")  Upload Music
-            li
-                a(href="/login")  Login
-            li
-                a(href="/join").header__btn  Join
+                

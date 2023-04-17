@@ -1,3 +1,7 @@
+.song-outbox{
+    margin:50px 200px 50px 200px;
+}
+
 .song-mixin__albumArt {
     height: 200px;
     border-radius: 7px;
@@ -6,11 +10,11 @@
     margin-bottom:30px;
 }
 
-#lp-box {
+.lp-box {
     position:relative;
 }
 
-#lpRotate {
+.lpRotate {
     height: 200px;
     border-radius: 7px;
     width: 200px;
@@ -33,4 +37,36 @@
         
     }
     
+}
+
+.songTitle {
+    margin-bottom: 7px;
+}
+
+.songArtist {
+    margin-bottom: 7px;
+}
+
+.songAlbum {
+    margin-bottom: 7px;
+}
+
+//grid
+
+.song-outbox {
+    display: grid;
+    grid-template-columns: repeat(8, 150px);
+    row-gap: 70px;
+}
+
+.text-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes-box {
+    position: relative;
+    right:-40px;
+    cursor:pointer;
+    color:white;
 }

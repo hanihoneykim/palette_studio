@@ -9,6 +9,21 @@ form {
     }
 }
 
+#submit {
+    background-color: skyblue;
+    color:black;
+}
+
+input[type="submit"],
+.social__btn {
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
 input:not(input[type="range"]) {
     all: unset;
     padding: 15px 20px;
@@ -24,17 +39,17 @@ input:not(input[type="range"]) {
     }
 }
 
-input[type="submit"],
-.social__btn {
-    border-radius: 5px;
-    padding: 12px 20px;
-    background-color: skyblue;
-    color: black;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-}
-
 span {
     color:white;
+}
+
+.auth-switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px 30px 0px;
+}
+
+.auth-switch span {
+    margin-bottom: 15px;
 }

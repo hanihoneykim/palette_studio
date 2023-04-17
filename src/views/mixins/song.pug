@@ -1,15 +1,17 @@
 mixin song(song)
     div#songContainer(data-id=song._id)
-        div.song-mixin__albumArt#homePlayBtn(style=`background-image:url(${song.albumArtUrl});background-size:cover;background-position:center;cursor:pointer;`)
-        div#lp-box
-            div#lpRotate(onloadstart="this.volume=0.5",style="background-image:url(images/lp.png);background-size:cover;background-position:center;cursor:pointer;")
-        audio(src="/" + song.fileUrl, controls)
+        div.song-mixin__albumArt.homePlayBtn(style=`background-image:url(${song.albumArtUrl});background-size:cover;background-position:center;cursor:pointer;`)
+        div.lp-box
+            div.lpRotate(onloadstart="this.volume=0.5",style="background-image:url(images/lp2.png);background-size:cover;background-position:center;cursor:pointer;")
+        audio(src="/" + song.fileUrl)
 
-
-
-        div
-            h4
-                a(href=`/songs/${song.id}`)#songTitle=song.title
-            p=song.artist
-            small=song.album
-            hr
+        div.text-box
+            div.info-box
+                h4.songTitle
+                    a(href=`/songs/${song.id}`)#songTitle=song.title
+                p.songArtist=song.artist
+                small.songAlbum=song.album
+            div.likes-box
+                i.fas.fa-heart
+    br
+    br

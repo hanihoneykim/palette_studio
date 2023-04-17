@@ -1,7 +1,73 @@
 .song-watch__albumArt {
-    height: 400px;
+    height: 500px;
     border-radius: 7px;
-    width: 400px;
+    width: 500px;
     background-color: ivory;
     margin-bottom:30px;
 }
+
+.now-playing {
+    margin-left: 160px;
+}
+
+#now-container {
+    margin:0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.playlist::-webkit-scrollbar {
+    display: none;
+}
+
+.playlist {
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+#playlist-box { 
+    height:70vh;
+    width:70vh;
+}
+
+#playlist-menu {
+    height:70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color:white;
+}
+
+#playlist-menu__now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+#playlist-menu__likes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.playlist {
+    padding:30px;
+}
+
+.playlist-container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    align-items: center;
+}
+
+.playlist-albumart {
+    height: 50px;
+    border-radius: 7px;
+    width: 50px;
+    background-color: ivory;
+}
+
+

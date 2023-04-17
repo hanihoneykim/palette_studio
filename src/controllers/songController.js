@@ -11,10 +11,11 @@ export const home = async (req, res) => {
 export const watch = async(req, res) => {
   const { id } = req.params;
   const song = await Song.findById(id);
+  const songs = await Song.find({}).sort({createdAt:"desc"});
   if (!song) {
     return res.render("404", {pageTitle:"Song not found.", siteName:"Ice Cream"})
   }
-  return res.render("watch", {pageTitle:song.title, siteName:"Ice Cream", song});
+  return res.render("watch", {pageTitle:song.title, siteName:"Ice Cream", song, songs});
 };
 
 export const getUpload = (req, res) => {
@@ -41,6 +42,11 @@ export const postUpload = async(req, res) => {
     return res.status(400).render("upload",{pageTitle:"Upload Music", siteName:"Ice Cream", errorMessage:error._message});
   }
 };
+
+export const likes = async(req, res) => {
+  const songs = await Song.find({}).sort({createdAt:"desc"});
+  return res.render("likes",{pageTitle:"Likes", siteName:"Ice Cream", songs})
+}
 
 /*
 
