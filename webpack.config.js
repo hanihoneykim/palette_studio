@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     main: BASE_JS + "main.js",
     songPlayer : "./src/client/js/songPlayer.js",
+    songWatch : "./src/client/js/songWatch.js",
   },
   plugins: [
     new MiniCssExtractPlugin({

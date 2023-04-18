@@ -1,7 +1,10 @@
 mixin song(song)
-    div.playlist-container(data-id=song._id)
-        div.playlist-albumart(style=`background-image:url(${song.albumArtUrl});background-size:cover;background-position:center;`)
-        h4.playlist__songTitle
-            a(href=`/songs/${song.id}`)#songTitle=song.title
-        p.splaylist__ongArtist=song.artist
+    div.playlist-outbox
+        div.playlist-container(data-id=song._id)(style="cursor: pointer;",onclick=`location.href='/songs/${song.id}'` )
+            div.playlist-albumart(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
+            h4.playlist__songTitle
+                a(href=`/songs/${song.id}`)#songTitle=song.title
+            p.playlist__songArtist=song.artist
+        div.playlist-likes
+                i.fas.fa-heart
     hr

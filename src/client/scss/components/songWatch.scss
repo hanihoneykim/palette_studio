@@ -57,9 +57,14 @@
     padding:30px;
 }
 
+.playlist-outbox {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
 .playlist-container {
     display: grid;
-    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-columns: 1.5fr 2.5fr 1fr;
     align-items: center;
 }
 
@@ -70,4 +75,10 @@
     background-color: ivory;
 }
 
-
+.playlist-likes {
+    position: relative;
+    right:-50px;
+    bottom: -16px;
+    color:rgba(255, 255, 255, 0.528);
+    cursor: pointer;
+}

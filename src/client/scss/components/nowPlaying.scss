@@ -1,0 +1,66 @@
+.watch-time {
+    display: flex;
+    margin-bottom:15px;
+}
+
+.play-volume-info  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.play_volume{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='range'] {
+    border-radius: 8px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    accent-color: #515151;
+    height: 7px;
+}
+
+#timeline {
+    background: linear-gradient(to right, #515151 0%, #515151 0%, #bfbfbf 0%, #bfbfbf 100%);
+    width:80%;
+    margin: 0px 15px 0px 15px;
+}
+
+#volume {
+    background: linear-gradient(to right, #515151 0%, #515151 50%, #bfbfbf 50%, #bfbfbf 100%);
+    width:50%;
+    margin-left: 10px;
+}
+
+.watch-time {
+    margin-bottom: 20px;
+}
+
+
+.watch-play {
+    margin-right: 30px;
+}
+
+.watch-time span {
+    font-size: 14px;
+}
+
+.song-info {
+    width:60%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right:-10px;
+}
+
+.song-info span {
+    margin: 0px 10px 0px 10px;
+    
+}
+
+
+#nowplaying__title {
+    font-weight: bolder;
+}
