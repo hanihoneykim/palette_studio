@@ -13,26 +13,29 @@
     justify-content: space-between;
 }
 
+
 input[type='range'] {
     border-radius: 8px;
     outline: none;
     transition: background 450ms ease-in;
     -webkit-appearance: none;
-    accent-color: #515151;
+    accent-color: #323232;
     height: 7px;
 }
 
 #timeline {
-    background: linear-gradient(to right, #515151 0%, #515151 0%, #bfbfbf 0%, #bfbfbf 100%);
+    background: linear-gradient(to right, #5a5a5a 0%, #5a5a5a 0%, #5a5a5a 0%, #5a5a5a 100%);
     width:80%;
     margin: 0px 15px 0px 15px;
 }
 
 #volume {
-    background: linear-gradient(to right, #515151 0%, #515151 50%, #bfbfbf 50%, #bfbfbf 100%);
+    background: linear-gradient(to right, #5a5a5a 0%, #5a5a5a 50%, #5a5a5a 50%, #5a5a5a 100%);
     width:50%;
     margin-left: 10px;
 }
+
+
 
 .watch-time {
     margin-bottom: 20px;
@@ -64,3 +67,4 @@ input[type='range'] {
 #nowplaying__title {
     font-weight: bolder;
 }
+

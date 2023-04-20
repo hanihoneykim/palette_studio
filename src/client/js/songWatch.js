@@ -57,6 +57,13 @@ const handleVolumeChange = (event) => {
     }
 };
 
+/*
+const handleInputRange = (event) => {
+    var gradient_value = 100 / event.target.attributes.max.value;
+    event.target.style.background = 'linear-gradient(to right, #515151 0%, #515151 '+gradient_value * event.target.value +'%, #bfbfbf ' +gradient_value *  event.target.value + '%, #bfbfbf 100%)';
+};
+*/
+
 const formatTime = (seconds) => new Date(seconds * 1000).toISOString().substring(14,19);
 
 const handleLoadedMetaData = () => {
@@ -64,7 +71,7 @@ const handleLoadedMetaData = () => {
     timeline.max = Math.floor(song.duration)
 }
 
-const handleTimeUpdate = () => {
+const handleTimeUpdate = (event) => {
     currentTime.innerText = formatTime(Math.floor(song.currentTime));
     timeline.value = Math.floor(song.currentTime);
 }
@@ -76,10 +83,6 @@ const handleTimelineChange = (event) => {
 
 
 
-const handleInputRange = (event) => {
-    var gradient_value = 100 / event.target.attributes.max.value;
-    event.target.style.background = 'linear-gradient(to right, #515151 0%, #515151 '+gradient_value * event.target.value +'%, #bfbfbf ' +gradient_value *  event.target.value + '%, #bfbfbf 100%)';
-};
 
 
 
@@ -101,8 +104,8 @@ const handleKeyboard = (e) => {
 }
 
 window.addEventListener('load', handleWindowPlay);
-timeline.addEventListener('input', handleInputRange);
-volume.addEventListener('input', handleInputRange);
+//timeline.addEventListener('input', handleInputRange);
+//volume.addEventListener('input', handleInputRange);
 playBtn.addEventListener('click', handlePlayClick);
 muteBtn.addEventListener('click', handleMuteClick);
 volumeRange.addEventListener('input', handleVolumeChange);
