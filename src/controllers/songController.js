@@ -48,6 +48,11 @@ export const likes = async(req, res) => {
   return res.render("likes",{pageTitle:"Likes", siteName:"Ice Cream", songs})
 }
 
+export const getLp = async(req, res) => {
+  const songs = await Song.find({}).sort({createdAt:"desc"});
+  return res.render("lpPlay", { pageTitle: "Home", siteName:"Ice Cream", songs });
+};
+
 /*
 
 export const getEdit = async(req, res) => {
