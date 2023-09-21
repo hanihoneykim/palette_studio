@@ -34,8 +34,6 @@
 
 #playlist-menu {
     height:70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     color:white;
 }
 
@@ -46,15 +44,27 @@
     cursor:pointer;
 }
 
-#playlist-menu__likes {
+#playlist-menu__now > span {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/*#playlist-menu__likes {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor:pointer;
-}
+} */
 
 .playlist {
+    width:60vh;
+    height:50vh;
     padding:30px;
+    overflow: auto;
+    overflow-y: scroll;
 }
 
 .playlist-outbox {
@@ -64,7 +74,8 @@
 
 .playlist-container {
     display: grid;
-    grid-template-columns: 1.5fr 2.5fr 1fr;
+    gap:50px;
+    grid-template-columns: 1fr 7fr 1fr;
     align-items: center;
 }
 
@@ -75,10 +86,15 @@
     background-color: ivory;
 }
 
-.playlist-likes {
+
+.playlist__songArtist{
+    padding-left: 20px;
+}
+
+/*.playlist-likes {
     position: relative;
     right:-50px;
     bottom: -16px;
     color:rgba(255, 255, 255, 0.528);
     cursor: pointer;
-}
+}*/

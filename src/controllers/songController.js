@@ -5,7 +5,7 @@ import User from "../models/User";
 
 export const home = async (req, res) => {
   const songs = await Song.find({}).sort({createdAt:"desc"});
-  return res.render("home", { pageTitle: "Home", siteName:"Ice Cream", songs });
+  return res.render("home", { pageTitle: "Home", siteName:"Live Music Studio", songs });
 };
 
 export const watch = async(req, res) => {
@@ -13,13 +13,13 @@ export const watch = async(req, res) => {
   const song = await Song.findById(id);
   const songs = await Song.find({}).sort({createdAt:"desc"});
   if (!song) {
-    return res.render("404", {pageTitle:"Song not found.", siteName:"Ice Cream"})
+    return res.render("404", {pageTitle:"Song not found.", siteName:"Live Music Studio"})
   }
-  return res.render("watch", {pageTitle:song.title, siteName:"Ice Cream", song, songs});
+  return res.render("watch", {pageTitle:song.title, siteName:"Live Music Studio", song, songs});
 };
 
 export const getUpload = (req, res) => {
-  return res.render("upload", {pageTitle:"Upload Music", siteName:"Ice Cream"});
+  return res.render("upload", {pageTitle:"Upload Music", siteName:"Live Music Studio"});
 }
 
 export const postUpload = async(req, res) => {
@@ -39,18 +39,18 @@ export const postUpload = async(req, res) => {
     return res.redirect("/")
   } catch (error) {
     console.log(error._message);
-    return res.status(400).render("upload",{pageTitle:"Upload Music", siteName:"Ice Cream", errorMessage:error._message});
+    return res.status(400).render("upload",{pageTitle:"Upload Music", siteName:"Live Music Studio", errorMessage:error._message});
   }
 };
 
 export const likes = async(req, res) => {
   const songs = await Song.find({}).sort({createdAt:"desc"});
-  return res.render("likes",{pageTitle:"Likes", siteName:"Ice Cream", songs})
+  return res.render("likes",{pageTitle:"Likes", siteName:"Live Music Studio", songs})
 }
 
 export const getLp = async(req, res) => {
   const songs = await Song.find({}).sort({createdAt:"desc"});
-  return res.render("lpPlay", { pageTitle: "Home", siteName:"Ice Cream", songs });
+  return res.render("lpPlay", { pageTitle: "Home", siteName:"Live Music Studio", songs });
 };
 
 /*
@@ -61,13 +61,13 @@ export const getEdit = async(req, res) => {
   if (!video) {
     return res.status(404).render("404", { pageTitle:"Song not found"});
   }
-  return res.render("edit", {pageTitle:`Edit: ${song.title}`, siteName:"Ice Cream", song})
+  return res.render("edit", {pageTitle:`Edit: ${song.title}`, siteName:"Live Music Studio", song})
 }
 
 export const postEdit = (req, res) => {
   const { id } = req.params;
   const { title, artist, album, albumUrl}
-  return res.render("watch", {pageTitle:song.title, siteName:"Ice Cream", song});
+  return res.render("watch", {pageTitle:song.title, siteName:"Live Music Studio", song});
   //여기서부터 해야함
 }
 

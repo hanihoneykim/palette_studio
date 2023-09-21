@@ -30,9 +30,9 @@ block content
         div#playlist-box
             div#playlist-menu
                 div#playlist-menu__now 
-                    span 재생목록
-                div#playlist-menu__likes 
-                    span 내가 좋아하는 곡
+                    span playlist
+                //-div#playlist-menu__likes 
+                    span 랜덤 재생
             div.playlist#now-playlist
                 each song in songs
                     +song(song)
