@@ -32,8 +32,8 @@ export const postUpload = async(req, res) => {
       artist,
       album,
       genre,
-      fileUrl:song[0].path,
-      albumArtUrl:albumArt[0].path.replace(/[\\]/g, "/"),
+      fileUrl:song[0].location,
+      albumArtUrl:albumArt[0].location.replace(/[\\]/g, "/"),
       createdAt:Date.now(),
     })
     return res.redirect("/")

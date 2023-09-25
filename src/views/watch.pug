@@ -4,8 +4,8 @@ include mixins/playlist
 block content
     div#now-container
         div.now-playing
-            div.song-watch__albumArt(style=`background-image:url(${"/"+song.albumArtUrl});background-size:cover;background-position:center;`)
-            audio(src="/" + song.fileUrl)
+            div.song-watch__albumArt(style=`background-image:url(${song.albumArtUrl});background-size:cover;background-position:center;`)
+            audio(src=song.fileUrl)
             div
                 div 
                     div.watch-time
