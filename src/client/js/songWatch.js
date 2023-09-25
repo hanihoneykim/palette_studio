@@ -103,6 +103,8 @@ const handleKeyboard = (e) => {
     }
 }
 
+
+
 window.addEventListener('load', handleWindowPlay);
 //timeline.addEventListener('input', handleInputRange);
 //volume.addEventListener('input', handleInputRange);

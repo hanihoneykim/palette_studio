@@ -1,5 +1,5 @@
 {
-  "name": "your_project_name",
+  "name": "palette-studio",
   "version": "1.0.0",
   "description": "xxxx",
   "scripts": {
@@ -30,11 +30,12 @@
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.13.16",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
     "@babel/node": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.10",
+    "@flydotio/dockerfile": "^0.4.10",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.2",

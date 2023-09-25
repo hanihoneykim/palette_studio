@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 const HTTP_BAD_REQUEST = 400;
 
 export const getJoin = (req,res) => {
-    return res.render("join", { pageTitle: "Home", siteName:"Live Music Studio"});
+    return res.render("join", { pageTitle: "Home", siteName:"Palette Live Studio"});
 };
 
 export const postJoin = async (req, res) => {
@@ -67,5 +67,5 @@ export const postLogin = async (req, res) => {
 };
 
 export const likes = (req, res) => {
-    return res.render("likes", { pageTitle:"Likes", siteName:"Live Music Studio" })
+    return res.render("likes", { pageTitle:"Likes", siteName:"Palette Live Studio" })
 }
