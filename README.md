@@ -1,4 +1,4 @@
-### 🎧 Palette Live Studio 🎧
+# 🎧 Palette Live Studio 🎧
 <p> 아이유의 팔레트 라이브 음원 스트리밍 사이트</p>
 <hr>
 
